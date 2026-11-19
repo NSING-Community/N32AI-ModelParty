@@ -1,0 +1,23 @@
+preprocess:
+  kind: timeseries_window
+  window_len: 1
+  channels: 4
+  scale:
+    div: 1.0
+    sub: 0.0
+  normalize:
+    mean:
+    - 19.691511154174805
+    - 54.35038375854492
+    - 1013.2044067382812
+    - 73.33644104003906
+    std:
+    - 7.4318647384643555
+    - 12.724353790283203
+    - 5.957915782928467
+    - 14.509127616882324
+postprocess:
+  kind: regression_threshold
+  threshold: 451.4200134277344
+  above_label: high_power
+  below_label: low_power

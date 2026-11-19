@@ -11,7 +11,9 @@
 - 各模型文件夹里的 `ai_spec.yaml`（预处理 / 后处理契约）；
 - `human_activity_recognition/tap_detector/tap_detector.tflite`（维护者自训）；
 - `predictive_maintenance/kfupm_1dcnn/kfupm_1dcnn_int8.tflite`（维护者自训的权重；
-  训练数据 KFUPM 数据集是 CC BY 4.0，署名要求见该模型卡）。
+  训练数据 KFUPM 数据集是 CC BY 4.0，署名要求见该模型卡）；
+- `regression/ccpp_mlp/ccpp_mlp_float32.tflite`（维护者自训；训练数据 UCI CCPP
+  是 CC BY 4.0，署名要求见该模型卡）。
 
 Apache-2.0 全文见 [`licenses/Apache-2.0.txt`](licenses/Apache-2.0.txt)。
 简单说：可以商用、修改、再分发，需保留版权与许可声明、标注修改，不提供担保，

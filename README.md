@@ -17,6 +17,7 @@ N32EmbedAI 的 `generate` / `parse` / `evaluate` 可以直接吃这里的路径�
 | `audio_event_detection` | [ds_cnn_s](audio_event_detection/ds_cnn_s/) | 12 类关键词识别（MFCC） | float32 `[1,490]` → `[1,12]` | Google Speech Commands | Apache-2.0（权重）+ CC BY 4.0（数据） |
 | `human_activity_recognition` | [tap_detector](human_activity_recognition/tap_detector/) | 敲击 / 无敲击二分类 | float32 `[1,1,256,3]` → `[1,1]` | 维护者自采 MPU6050 数据 | Apache-2.0（自有） |
 | `predictive_maintenance` | [kfupm_1dcnn](predictive_maintenance/kfupm_1dcnn/) | 不平衡 / 不对中 / 正常三分类 | int8 `[1,4096,4]` → `[1,3]` | KFUPM 四通道振动数据集 | Apache-2.0（权重）+ CC BY 4.0（数据） |
+| `regression` | [ccpp_mlp](regression/ccpp_mlp/) | 机组净输出功率 PE（MW） | float32 `[1,4]` → `[1,1]` | UCI CCPP | Apache-2.0（权重）+ CC BY 4.0（数据） |
 
 ## 目录结构
 
@@ -29,7 +30,8 @@ N32EmbedAI 的 `generate` / `parse` / `evaluate` 可以直接吃这里的路径�
 ```
 
 分类沿用 STM32 Model Zoo 的组织方式：`image_classification` / `object_detection` /
-`audio_event_detection` / `human_activity_recognition` / `predictive_maintenance`。
+`audio_event_detection` / `human_activity_recognition` / `predictive_maintenance`；
+`regression` 是本库新增的分类（参考库没有放通用回归的位置）。
 新增模型时按同样的四件套放进去，并在根 README 的表格里加一行。
 
 ## 在 N32EmbedAI 里使用

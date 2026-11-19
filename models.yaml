@@ -52,3 +52,11 @@ models:
     file: predictive_maintenance/kfupm_1dcnn/kfupm_1dcnn_int8.tflite
     spec: predictive_maintenance/kfupm_1dcnn/ai_spec.yaml
     license: Apache-2.0
+
+  - key: ccpp_mlp
+    category: regression
+    title: Combined Cycle Power Plant Output Regression
+    task: regression
+    file: regression/ccpp_mlp/ccpp_mlp_float32.tflite
+    spec: regression/ccpp_mlp/ai_spec.yaml
+    license: Apache-2.0

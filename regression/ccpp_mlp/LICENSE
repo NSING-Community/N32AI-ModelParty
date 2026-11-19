@@ -1,0 +1,15 @@
+Model: CCPP Combined Cycle Power Plant Output Regression
+(ccpp_mlp_float32.tflite)
+Weights: Copyright (c) 2026 the N32AI Model Zoo contributors.
+License: Apache License, Version 2.0.
+Full text: ../../licenses/Apache-2.0.txt
+
+Modifications: trained and exported to float32 TFLite by this project.
+
+Training data: UCI Combined Cycle Power Plant (Tüfekci & Kaya, 2014), licensed
+CC BY 4.0. When redistributing this model, keep the dataset attribution, link
+the licence and indicate changes:
+  Tüfekci, P. & Kaya, H. (2014). Combined Cycle Power Plant [Dataset].
+  UCI Machine Learning Repository. https://doi.org/10.24432/C5002N
+  https://creativecommons.org/licenses/by/4.0/
+The dataset itself is not distributed here.
