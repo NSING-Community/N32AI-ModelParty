@@ -1,0 +1,54 @@
+# N32AI Model Zoo catalogue.
+#
+# One entry per model folder.  The category is the use-case folder it lives in;
+# `file` and `spec` are relative to this file's directory.  `license` is the
+# weight licence; a third-party model's folder LICENSE is authoritative and the
+# dataset licence is stated in its README.
+models:
+  - key: mnist
+    category: image_classification
+    title: MNIST Digit Recognition
+    task: classification
+    file: image_classification/mnist/mnist.tflite
+    spec: image_classification/mnist/ai_spec.yaml
+    license: NOASSERTION
+
+  - key: mobilenetv1_a025_128_int8
+    category: image_classification
+    title: MobileNetV1 a0.25 128 Image Classification
+    task: classification
+    file: image_classification/mobilenetv1_a025_128_int8/mobilenetv1_a025_128_int8.tflite
+    spec: image_classification/mobilenetv1_a025_128_int8/ai_spec.yaml
+    license: Apache-2.0
+
+  - key: person_detection
+    category: object_detection
+    title: Person Detection
+    task: classification
+    file: object_detection/person_detection/person_detect.tflite
+    spec: object_detection/person_detection/ai_spec.yaml
+    license: Apache-2.0
+
+  - key: ds_cnn_s
+    category: audio_event_detection
+    title: DS-CNN-S Keyword Spotting
+    task: classification
+    file: audio_event_detection/ds_cnn_s/DS_CNN_S.tflite
+    spec: audio_event_detection/ds_cnn_s/ai_spec.yaml
+    license: Apache-2.0
+
+  - key: tap_detector
+    category: human_activity_recognition
+    title: Accelerometer Tap Detection
+    task: classification
+    file: human_activity_recognition/tap_detector/tap_detector.tflite
+    spec: human_activity_recognition/tap_detector/ai_spec.yaml
+    license: Apache-2.0
+
+  - key: kfupm_1dcnn
+    category: predictive_maintenance
+    title: Rotating Machinery Fault Diagnosis
+    task: classification
+    file: predictive_maintenance/kfupm_1dcnn/kfupm_1dcnn_int8.tflite
+    spec: predictive_maintenance/kfupm_1dcnn/ai_spec.yaml
+    license: Apache-2.0

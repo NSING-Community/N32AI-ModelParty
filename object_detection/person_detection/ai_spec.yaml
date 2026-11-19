@@ -1,0 +1,28 @@
+# Person Detection -- the pre/post-processing contract.
+#
+# The input is 96x96x1 INT8 grayscale, not 3 channels: the model file itself
+# says so (parse reports io.inputs[0].shape as [1,96,96,1]). This contract
+# used to live in aistudio/preset/models.yaml and said image_rgb / [1,96,96,3],
+# describing a different (float RGB) person_detect; the disagreement raised
+# AIE5001 from preproc._image_vars before the output directory was created,
+# so generate failed having written nothing.
+#
+# scale {div: 127.5, sub: 1.0} is (u/127.5 - 1), the same transform the
+# reference firmware folds into its lookup table in
+# person_detector.cc::BuildLumaTable(); ai_preproc_run does it per pixel at
+# runtime rather than building a table.
+#
+# The output is a two-element softmax of shape [1,2], not a single logit, so
+# this is softmax_argmax rather than binary_threshold (which wants exactly
+# one element). The order puts output[0]'s name first: in the reference
+# firmware person_detector.cc, kNoPersonIndex = 0 and kPersonIndex = 1.
+
+preprocess:
+  kind: image_grayscale
+  input_shape: [1, 96, 96, 1]
+  resize_to: [96, 96]
+  scale: {div: 127.5, sub: 1.0}
+
+postprocess:
+  kind: softmax_argmax
+  class_names: ["no_person", "person"]

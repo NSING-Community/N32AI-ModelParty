@@ -1,0 +1,24 @@
+# Keyword Spotting -- the pre/post-processing contract.
+#
+# Frame length and shift are given in samples: 30 ms / 20 ms @ 16 kHz. The
+# tool works in samples because every MFCC table is built per sample --
+# milliseconds would mean another multiplication by the sample rate, and one
+# more rounding step is one more place where "right on the PC, wrong on the
+# board" comes from.
+#
+# The training side's mel filterbank and DCT must match term by term.
+
+preprocess:
+  kind: audio_mfcc
+  sample_rate: 16000
+  frame_len: 480
+  frame_shift: 320
+  num_coeffs: 10
+  num_bins: 40
+  mel_low_hz: 20
+  mel_high_hz: 4000
+  normalize: {mean: 0.0, std: 1.0}
+
+postprocess:
+  kind: softmax_argmax
+  class_names: ["silence","unknown","yes","no","up","down","left","right","on","off","stop","go"]

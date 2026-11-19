@@ -1,0 +1,43 @@
+# Rotating Machinery Fault Diagnosis (KFUPM SRO, four-channel vibration) --
+# the pre/post-processing contract.
+#
+# One window is 4,096 samples of four synchronous radial channels, in the
+# dataset's fixed order V1 / H1 / V2 / H2 (two orthogonal pairs at two
+# measurement points), 160 ms at 25.6 kHz. The model input is [1, 4096, 4] and
+# the generated front end writes it window-major: sample t of channel c goes to
+# t * 4 + c, which is the layout the training windows (4096, 4) use.
+#
+# Normalisation is the training run's "global" mode: the window is divided by
+# one fixed standard deviation per channel, estimated on the 600/900 RPM
+# training split (the demo's models/preprocess.json). The values differ by
+# channel because the four sensors sit at different positions and see different
+# gains, hence a per-channel table rather than one scalar.
+#
+# The training script also subtracts each window's own per-channel mean.
+# `window_mean: true` can express that step (and `aistudio dataset` would
+# centre the same way), but this slot keeps the exported global normalisation
+# as-is: the dataset's records are near zero mean -- their means are small
+# against these channel standard deviations -- so the residual is small. A
+# deployment whose sensor front end carries a large DC offset should either
+# remove it before calling ai_preproc_run() or switch this contract to
+# window_mean.
+#
+# The output is a three-way softmax in the dataset's label order:
+# 0 = imbalance, 1 = misalignment, 2 = normal. This slot's model file is the
+# global-normalisation export (kfupm_1dcnn_int8.tflite); the demo's
+# *_window_int8.tflite variant uses a different, per-window normalisation and
+# must not be paired with this contract.
+
+preprocess:
+  kind: timeseries_window
+  input_shape: [1, 4096, 4]
+  window_len: 4096
+  channels: 4
+  window_mean: true 
+  normalize:
+    mean: 0.0
+    std: [0.06621339172124863, 0.05617206543684006, 0.036210086196660995, 0.02938653528690338]
+
+postprocess:
+  kind: softmax_argmax
+  class_names: ["imbalance", "misalignment", "normal"]

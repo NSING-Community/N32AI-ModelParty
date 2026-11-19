@@ -1,0 +1,18 @@
+Model: MNIST Digit Recognition (mnist.tflite)
+License status: UNVERIFIED (SPDX: NOASSERTION)
+
+The weights come from a TensorFlow/Keras-style "mnist_cnn" example whose exact
+upstream project and commit are not recorded in the N32EmbedAI repository.
+Without that record the redistribution license cannot be confirmed, so this
+model is not offered under the Apache-2.0 licence that covers the rest of this
+repository.
+
+Training data: MNIST (Yann LeCun, Corinna Cortes, Christopher J.C. Burges).
+The official MNIST page stated no licence or terms of use. TensorFlow/Keras
+documentation states: "MNIST dataset is made available under the terms of the
+Creative Commons Attribution-Share Alike 3.0 license."
+https://keras.io/api/datasets/mnist/
+
+Do not rely on this model for a commercial product until the upstream example
+is recorded (project + commit) or the model is replaced. See ../../README.md
+("两个必须先确认的缺口").

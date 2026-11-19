@@ -1,0 +1,36 @@
+# Accelerometer Vibration (tap detector) -- the pre/post-processing contract.
+#
+# The slot is the accelerometer one; the file name says what it detects. Its
+# input is [1, 1, 256, 3] -- 256 samples of x/y/z acceleration, the second 1
+# being onnx2tf's leftover axis -- so the window is 256 samples, not the 128
+# the slot used to advertise. The element count is what the generator checks
+# (256 x 3 == 768); the generated layout is sample-major (t * channels + c),
+# which is how the tensor is read.
+#
+# The output is a single sigmoid probability (tap_prob, the model's last op is
+# LOGISTIC), not a class vector, so this is binary_threshold: index 0 below
+# 0.5, index 1 at or above it. regression_threshold would decode no class at
+# all. The identity normalisation is the honest default: the export carries no
+# training-side scaling. If training standardised per axis, put mean/std here
+# -- the generator applies the same affine map the training script did, and
+# nothing else can recover it from the weights.
+#
+# window_mean: true is a different thing from normalize.mean. The training
+# pipeline centres every window on that window's own per-axis average, so the
+# offset removed is a property of the samples in hand, not a constant of the
+# dataset -- no static mean can express it. The generated front end computes
+# it in a first pass and subtracts it before the scale/normalise above. With
+# the identity normalisation that leaves v = raw - mean(axis, this window).
+
+preprocess:
+  kind: timeseries_window
+  input_shape: [1, 1, 256, 3]
+  window_len: 256
+  channels: 3
+  window_mean: true
+  normalize: {mean: 0.0, std: 1.0}
+
+postprocess:
+  kind: binary_threshold
+  class_names: ["no_tap", "tap"]
+  threshold: 0.5
