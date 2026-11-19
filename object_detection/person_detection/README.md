@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # Person Detection
 
 TensorFlow Lite Micro 的人体存在性检测模型：96×96 灰度图 → `no_person` / `person`。

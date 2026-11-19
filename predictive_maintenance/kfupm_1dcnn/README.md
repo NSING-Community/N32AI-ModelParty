@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # KFUPM 1D-CNN — Rotating Machinery Fault Diagnosis
 
 四通道振动 1D-CNN：`imbalance`（不平衡）/ `misalignment`（不对中）/ `normal`（正常）。
@@ -27,9 +29,9 @@ Qasim, Yakoop; Almubarak, Hassan (2026). *Four-Channel Vibration Dataset for
 Cross-Speed Rotating-Machinery Fault Diagnosis.* Mendeley Data, V1.
 https://doi.org/10.17632/y8mv28hjwb.1
 
-许可 **CC BY 4.0**：允许商用，必须署名、给出许可链接、注明修改。数据集页面另要求引用
-其关联的 SRO-Net 论文（截至 2026-11 尚未给出正式论文）。SRO-Net 代码是 MIT，但本仓库
-不分发它，也不分发数据集。
+许可 **CC BY 4.0**：允许商用，必须署名、给出许可链接、注明修改。SRO-Net 代码是 MIT；
+其 CITATION.cff 要求使用该代码时引用关联论文（截至 2026-11 尚未发表）。数据集页面只把
+SRO-Net 列为相关软件；本仓库不分发 SRO-Net 代码，也不分发数据集。
 
 ## 出处
 

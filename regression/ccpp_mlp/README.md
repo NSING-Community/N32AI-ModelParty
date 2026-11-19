@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # CCPP — Combined Cycle Power Plant Output Regression
 
 从四路环境量预测联合循环机组的净输出功率 PE（MW）：

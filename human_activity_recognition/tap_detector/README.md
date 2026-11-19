@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # Accelerometer Tap Detection
 
 在桌面静置的 MPU6050 上检测「手指敲击桌面」事件：256 点 × 三轴加速度 → `tap_prob`。

@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # MNIST Digit Recognition
 
 手写数字 0–9 的 10 类分类模型，适合作为入门示例。

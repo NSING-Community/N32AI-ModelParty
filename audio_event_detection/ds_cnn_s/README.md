@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # DS-CNN-S Keyword Spotting
 
 Arm 的 DS-CNN-S 关键词识别模型（12 类），输入是 49 帧 × 10 维 MFCC。
