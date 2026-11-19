@@ -78,7 +78,7 @@ models:
     copyright: "Nsing Technologies Inc. (国民技术股份有限公司)"
     dataset: "self-collected MPU6050"
     dataset_license: own
-    commercial_use: review
+    commercial_use: allowed
     sha256: 497ede0883d8d7e6497e54ae22f0f05efb77d844a8fb07b4dc24192e3c59c591
     provenance: "in-house (PyTorch -> ONNX -> onnx2tf)"
 

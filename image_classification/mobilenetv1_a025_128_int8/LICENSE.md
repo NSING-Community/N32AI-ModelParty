@@ -21,6 +21,13 @@ non-commercial research and educational purposes. Whether those terms reach
 the trained weights is legally unsettled; commercial use should be reviewed by
 counsel. See README.md.
 
+Upstream NOTICE status (verified 2026-11-19): tensorflow/models (the TF-Slim
+checkpoint origin) ships LICENSE and AUTHORS but no NOTICE file; the legacy
+keras-applications package is MIT and has no NOTICE file; Keras 3
+(Apache-2.0) likewise ships no NOTICE file. Apache-2.0 Section 4(d) therefore
+carries no additional upstream NOTICE content for these weights; the copyright
+notices above are the complete attribution set to retain.
+
 ---
 
 ## Apache License 2.0

@@ -18,6 +18,12 @@ https://cocodataset.org); Visual Wake Words (Chowdhery et al., 2019,
 arXiv:1906.05721). The dataset is not distributed with this model.
 Dataset license text: Creative Commons Attribution 4.0 International (below).
 
+Upstream NOTICE status (verified 2026-11-19): tensorflow/tflite-micro at
+commit aeac6f39e5c7475cea20c54e86d41e3a38312546 ships a LICENSE file but no
+NOTICE file. Apache-2.0 Section 4(d) therefore carries no additional upstream
+NOTICE content for this model; the copyright notices above are the complete
+attribution set to retain.
+
 ---
 
 ## Apache License 2.0

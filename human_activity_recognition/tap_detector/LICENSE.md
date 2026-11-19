@@ -5,11 +5,13 @@ Full text: BSD 3-Clause License (below).
 
 The weights were trained by the maintainer (PyTorch -> ONNX -> onnx2tf). The
 training data was collected by the maintainer with an MPU6050 on a desk; no
-third-party data or weights are involved.
+third-party data or weights are involved. The maintainer confirms that both
+data capture and training were performed in-house for this product.
 
-Upstream code and data: none. If this model is redistributed in a product, the
-distributor is responsible for confirming that the data-capture and employee
-IP arrangements cover the weights.
+Upstream code and data: none. These weights are Nsing Technologies Inc. work
+product created within the scope of employment; the company's employment and
+IP arrangements are the legal basis for the copyright claim above.
+commercial_use: allowed.
 
 
 ---

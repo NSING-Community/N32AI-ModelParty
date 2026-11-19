@@ -23,6 +23,12 @@ this model, keep the dataset attribution too:
 Dataset license text: Creative Commons Attribution 4.0 International (below).
 The dataset itself is not distributed here.
 
+Upstream NOTICE status (verified 2026-11-19): ARM-software/ML-KWS-for-MCU
+ships a LICENSE file (Apache-2.0) but no NOTICE file. Apache-2.0 Section 4(d)
+therefore carries no additional upstream NOTICE content for this model; the
+Arm and TensorFlow copyright notices above are the complete attribution set
+to retain.
+
 ---
 
 ## Apache License 2.0

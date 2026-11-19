@@ -59,4 +59,4 @@ CC BY 4.0 的署名（随模型再分发时保留）：
 > Tüfekci, P. & Kaya, H. (2014). *Combined Cycle Power Plant* [Dataset].
 > UCI Machine Learning Repository. https://doi.org/10.24432/C5002N
 
-权重许可见 [`LICENSE.md`](LICENSE.md)：Apache-2.0；数据集署名与链接必须保留。
+权重许可见 [`LICENSE.md`](LICENSE.md)：BSD-3-Clause（Nsing Technologies Inc.）；数据集署名与链接必须保留。

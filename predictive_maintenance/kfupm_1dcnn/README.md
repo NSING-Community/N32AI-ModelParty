@@ -39,4 +39,4 @@ https://doi.org/10.17632/y8mv28hjwb.1
 
 ## 许可
 
-见 [`LICENSE.md`](LICENSE.md)：权重 Apache-2.0；数据 CC BY 4.0 的署名义务必须随产品保留。
+见 [`LICENSE.md`](LICENSE.md)：权重 BSD-3-Clause（Nsing Technologies Inc.）；数据 CC BY 4.0 的署名义务必须随产品保留。

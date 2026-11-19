@@ -29,6 +29,14 @@ licences -- the Nsing Technologies Inc. copyright and the BSD-3-Clause
 declaration above do not apply to them. See the third-party component list
 below, and the licence texts reproduced in the corresponding model folders.
 
+Redistribution of model files: every .tflite file must be redistributed
+together with the LICENSE.md in its folder (full licence text and
+attributions). The .tflite files carry no embedded licence metadata;
+extracting a .tflite on its own does not relieve anyone of the obligations in
+that LICENSE.md -- for the Apache-2.0 models this includes Section 4 (provide
+a copy of the licence, state changes prominently, retain all copyright and
+attribution notices, and carry forward any upstream NOTICE content).
+
 ================================================================================
 Third-party components
 ================================================================================
