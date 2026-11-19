@@ -2,7 +2,7 @@
 
 # N32AI Model Party
 
-`n32ai-modelparty` 是一个面向国民技术股份有限公司 MCU 的模型库，按用途分类组织。每个模型文件夹里都有模型文件、`ai_spec.yaml`（预处理 / 后处理契约）、`README.md`（模型卡）和 `LICENSE.md`（权重许可与归属，含许可证全文）。
+`n32ai-modelparty` 是一个面向国民技术股份有限公司系列 MCU 的端侧模型库，按用途分类组织。每个模型文件夹里都有模型文件、`ai_spec.yaml`（预处理 / 后处理契约）、`README.md`（模型说明）和 `LICENSE.md`（权重许可与归属，含许可证全文）。
 
 ## 模型一览
 
@@ -48,12 +48,12 @@
   对应 `LICENSE.md` 的义务；对 Apache-2.0 模型尤其要遵守其第 4 条（向接收者提供许可
   证副本、显著注明修改、保留全部版权/署名声明）。
 
-商业状态（`allowed` / `review` / `prohibited`）以根 `NOTICE`、各模型 `LICENSE.md`
-和 `models.yaml` 的 `commercial_use` 为准。当前 `review` 共 3 个，均与训练数据的
-外部许可有关：
+### Demo / review 模型
 
-- `mnist`：MNIST 数据许可状态不明（官方页无声明，Keras 文档称 CC BY-SA 3.0）；
-- `mobilenetv1_a025_128_int8`：ImageNet 访问条款限定非商业研究/教学，商用口径待法务确认；
-- `person_detection`：训练数据 VWW/COCO 含部分 NonCommercial Flickr 图片，影响待定。
+以下模型仅作为 demo / 研究模型提供，不进入商业发布包；商用前需法务确认。完整许可证与署名见各模型 `LICENSE.md`。
 
-这些是工程事实记录，不是法律意见。
+- `mnist`
+- `mobilenetv1_a025_128_int8`
+- `person_detection`
+
+商业状态（`allowed` / `review` / `prohibited`）以根 `NOTICE`、各模型 `LICENSE.md` 和 `models.yaml` 的 `commercial_use` 为准。这些是工程事实记录，不是法律意见。

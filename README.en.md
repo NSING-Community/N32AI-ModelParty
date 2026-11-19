@@ -54,15 +54,16 @@
   models, observe Section 4 in particular (give recipients a copy of the license, state
   changes prominently, and retain all copyright and attribution notices).
 
+### Demo / review models
+
+The following models are provided as demos/research models only; they are not part of
+the commercial release bundle and require legal review before commercial use. See each
+model's `LICENSE.md` for the full license text and attribution.
+
+- `mnist`
+- `mobilenetv1_a025_128_int8`
+- `person_detection`
+
 Commercial status (`allowed` / `review` / `prohibited`) is governed by the root
-`NOTICE`, each model's `LICENSE.md`, and `commercial_use` in `models.yaml`. There are
-currently 3 `review` models, all related to external training-data licenses:
-
-- `mnist`: MNIST dataset license unclear (the official page states none; Keras docs
-  claim CC BY-SA 3.0);
-- `mobilenetv1_a025_128_int8`: ImageNet access terms limit use to non-commercial
-  research/education; commercial use needs legal confirmation;
-- `person_detection`: training data VWW/COCO includes some NonCommercial Flickr images;
-  impact pending.
-
-These are engineering records, not legal advice.
+`NOTICE`, each model's `LICENSE.md`, and `commercial_use` in `models.yaml`. These are
+engineering records, not legal advice.
