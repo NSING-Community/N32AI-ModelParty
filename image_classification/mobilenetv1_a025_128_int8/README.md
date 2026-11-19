@@ -41,4 +41,4 @@ int8 与 float 的 Top-1 一致率 77.35%。校准只用了 imagenette2-160 的 
 
 ## 许可
 
-见 [`LICENSE.md`](LICENSE.md)：权重 Apache-2.0；ImageNet 条款的商用口径请法务确认。
+见 [`LICENSE.md`](LICENSE.md)：权重 Apache-2.0。

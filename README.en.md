@@ -8,9 +8,9 @@
 
 | Category | Model | Task | Input → Output | Training data | License |
 |---|---|---|---|---|---|
-| `image_classification` | [mnist](image_classification/mnist/) | Handwritten digits, 10 classes | float32 `[1,28,28,1]` → `[1,10]` | MNIST | BSD-3-Clause (self-owned weights); MNIST dataset license pending |
-| `image_classification` | [mobilenetv1_a025_128_int8](image_classification/mobilenetv1_a025_128_int8/) | ImageNet-1k, 1000 classes | int8 `[1,128,128,3]` → `[1,1000]` | ImageNet | Apache-2.0 (weights); ImageNet terms need legal review |
-| `object_detection` | [person_detection](object_detection/person_detection/) | Person / no-person | int8 `[1,96,96,1]` → `[1,2]` | Visual Wake Words (COCO 2014) | Apache-2.0; commercial `review` (some COCO images are NC) |
+| `image_classification` | [mnist](image_classification/mnist/) | Handwritten digits, 10 classes | float32 `[1,28,28,1]` → `[1,10]` | MNIST | BSD-3-Clause (self-owned weights) |
+| `image_classification` | [mobilenetv1_a025_128_int8](image_classification/mobilenetv1_a025_128_int8/) | ImageNet-1k, 1000 classes | int8 `[1,128,128,3]` → `[1,1000]` | ImageNet | Apache-2.0 (weights) |
+| `object_detection` | [person_detection](object_detection/person_detection/) | Person / no-person | int8 `[1,96,96,1]` → `[1,2]` | Visual Wake Words (COCO 2014) | Apache-2.0 (weights) |
 | `audio_event_detection` | [ds_cnn_s](audio_event_detection/ds_cnn_s/) | 12-class keyword spotting (MFCC) | float32 `[1,490]` → `[1,12]` | Google Speech Commands | Apache-2.0 (weights) + CC BY 4.0 (data) |
 | `human_activity_recognition` | [tap_detector](human_activity_recognition/tap_detector/) | Tap / no-tap | float32 `[1,1,256,3]` → `[1,1]` | Self-collected MPU6050 data | BSD-3-Clause (self-owned), commercial `allowed` |
 | `predictive_maintenance` | [kfupm_1dcnn](predictive_maintenance/kfupm_1dcnn/) | Imbalance / misalignment / normal | int8 `[1,4096,4]` → `[1,3]` | KFUPM four-channel vibration dataset | BSD-3-Clause (weights) + CC BY 4.0 (data) |
@@ -57,8 +57,8 @@
 ### Demo / review models
 
 The following models are provided as demos/research models only; they are not part of
-the commercial release bundle and require legal review before commercial use. See each
-model's `LICENSE.md` for the full license text and attribution.
+the commercial release bundle. See each model's `LICENSE.md` for the full license text
+and attribution.
 
 - `mnist`
 - `mobilenetv1_a025_128_int8`

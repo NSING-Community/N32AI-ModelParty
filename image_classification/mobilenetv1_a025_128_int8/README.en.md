@@ -45,5 +45,4 @@ repository.
 
 ## License
 
-See [`LICENSE.md`](LICENSE.md): weights are Apache-2.0; consult legal to confirm the
-commercial-use interpretation of the ImageNet terms.
+See [`LICENSE.md`](LICENSE.md): weights are Apache-2.0.

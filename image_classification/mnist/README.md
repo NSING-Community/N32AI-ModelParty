@@ -24,7 +24,7 @@ float32 TFLite。权重是 Nsing Technologies Inc. 自有产物；本仓库不�
 训练数据是 MNIST（Yann LeCun、Corinna Cortes、Christopher J.C. Burges）。官方 MNIST
 页面没有许可或使用条款；TensorFlow/Keras 文档称其按 CC BY-SA 3.0 提供，该说法可追溯
 到 2018 年的一个 TensorFlow commit，没有给出来源。权重是否构成 MNIST 的改编作品、
-CC BY-SA 3.0 的 ShareAlike 是否适用于权重，法律上没有定论；商用前请法务确认。
+CC BY-SA 3.0 的 ShareAlike 是否适用于权重，法律上没有定论。
 
 ## 指标
 
@@ -32,4 +32,4 @@ CC BY-SA 3.0 的 ShareAlike 是否适用于权重，法律上没有定论；商�
 
 ## 许可
 
-见 [`LICENSE.md`](LICENSE.md)：权重 BSD-3-Clause（Nsing Technologies Inc.）；训练数据 MNIST 的许可未定（官方页无声明，Keras 文档称 CC BY-SA 3.0）。`commercial_use: review`，商用前请法务确认。
+见 [`LICENSE.md`](LICENSE.md)：权重 BSD-3-Clause（Nsing Technologies Inc.）；训练数据 MNIST 的许可未定（官方页无声明，Keras 文档称 CC BY-SA 3.0）。`commercial_use: review`。

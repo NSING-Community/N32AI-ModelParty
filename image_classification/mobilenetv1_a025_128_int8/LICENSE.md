@@ -18,8 +18,7 @@ modification must be stated when redistributing the file.
 
 Training data: ImageNet/ILSVRC. Its terms of access limit the database to
 non-commercial research and educational purposes. Whether those terms reach
-the trained weights is legally unsettled; commercial use should be reviewed by
-counsel. See README.md.
+the trained weights is legally unsettled. See README.md.
 
 Upstream NOTICE status (verified 2026-11-19): tensorflow/models (the TF-Slim
 checkpoint origin) ships LICENSE and AUTHORS but no NOTICE file; the legacy

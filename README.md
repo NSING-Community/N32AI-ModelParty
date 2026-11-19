@@ -8,9 +8,9 @@
 
 | 分类 | 模型 | 任务 | 输入 → 输出 | 训练数据 | 许可 |
 |---|---|---|---|---|---|
-| `image_classification` | [mnist](image_classification/mnist/) | 手写数字 10 类 | float32 `[1,28,28,1]` → `[1,10]` | MNIST | BSD-3-Clause（自有权重）；MNIST 数据许可待确认 |
-| `image_classification` | [mobilenetv1_a025_128_int8](image_classification/mobilenetv1_a025_128_int8/) | ImageNet-1k 1000 类 | int8 `[1,128,128,3]` → `[1,1000]` | ImageNet | Apache-2.0（权重），ImageNet 条款需法务确认 |
-| `object_detection` | [person_detection](object_detection/person_detection/) | 人 / 无人二分类 | int8 `[1,96,96,1]` → `[1,2]` | Visual Wake Words（COCO 2014） | Apache-2.0；商用 `review`（COCO 含部分 NC 图片） |
+| `image_classification` | [mnist](image_classification/mnist/) | 手写数字 10 类 | float32 `[1,28,28,1]` → `[1,10]` | MNIST | BSD-3-Clause（自有权重） |
+| `image_classification` | [mobilenetv1_a025_128_int8](image_classification/mobilenetv1_a025_128_int8/) | ImageNet-1k 1000 类 | int8 `[1,128,128,3]` → `[1,1000]` | ImageNet | Apache-2.0（权重） |
+| `object_detection` | [person_detection](object_detection/person_detection/) | 人 / 无人二分类 | int8 `[1,96,96,1]` → `[1,2]` | Visual Wake Words（COCO 2014） | Apache-2.0（权重） |
 | `audio_event_detection` | [ds_cnn_s](audio_event_detection/ds_cnn_s/) | 12 类语音关键词识别（MFCC） | float32 `[1,490]` → `[1,12]` | Google Speech Commands | Apache-2.0（权重）+ CC BY 4.0（数据） |
 | `human_activity_recognition` | [tap_detector](human_activity_recognition/tap_detector/) | 敲击 / 无敲击二分类 | float32 `[1,1,256,3]` → `[1,1]` | 维护者自采 MPU6050 数据 | BSD-3-Clause（自有），商用 `allowed` |
 | `predictive_maintenance` | [kfupm_1dcnn](predictive_maintenance/kfupm_1dcnn/) | 不平衡 / 不对中 / 正常三分类 | int8 `[1,4096,4]` → `[1,3]` | KFUPM 四通道振动数据集 | BSD-3-Clause（权重）+ CC BY 4.0（数据） |
@@ -50,7 +50,7 @@
 
 ### Demo / review 模型
 
-以下模型仅作为 demo / 研究模型提供，不进入商业发布包；商用前需法务确认。完整许可证与署名见各模型 `LICENSE.md`。
+以下模型仅作为 demo / 研究模型提供，不进入商业发布包。完整许可证与署名见各模型 `LICENSE.md`。
 
 - `mnist`
 - `mobilenetv1_a025_128_int8`

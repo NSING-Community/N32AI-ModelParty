@@ -14,8 +14,7 @@ https://keras.io/api/datasets/mnist/
 
 Whether the trained weights are an adaptation of MNIST, and whether the
 CC BY-SA 3.0 ShareAlike term applies to them, is legally unsettled. The
-weights are offered under BSD-3-Clause; commercial use should be reviewed by
-counsel. The dataset itself is not distributed here.
+weights are offered under BSD-3-Clause. The dataset itself is not distributed here.
 
 ---
 

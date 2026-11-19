@@ -19,7 +19,7 @@ A 10-class classification model for handwritten digits 0–9, suitable as an int
 
 Trained in-house by the maintainers on the official MNIST dataset: TensorFlow/Keras `mnist` loader → training → float32 TFLite. The weights are a self-owned product of Nsing Technologies Inc.; this repository does not include MNIST data, training scripts, or model artifacts.
 
-The training data is MNIST (Yann LeCun, Corinna Cortes, Christopher J.C. Burges). The official MNIST page states no license or terms of use; TensorFlow/Keras documentation states it is provided under CC BY-SA 3.0, a claim traceable to a 2018 TensorFlow commit with no source cited. Whether the weights constitute an adaptation of MNIST, and whether the ShareAlike term of CC BY-SA 3.0 applies to the weights, is legally unsettled; consult legal counsel before commercial use.
+The training data is MNIST (Yann LeCun, Corinna Cortes, Christopher J.C. Burges). The official MNIST page states no license or terms of use; TensorFlow/Keras documentation states it is provided under CC BY-SA 3.0, a claim traceable to a 2018 TensorFlow commit with no source cited. Whether the weights constitute an adaptation of MNIST, and whether the ShareAlike term of CC BY-SA 3.0 applies to the weights, is legally unsettled.
 
 ## Metrics
 
@@ -27,4 +27,4 @@ This repository does not record the accuracy of this model; without a verifiable
 
 ## License
 
-See [`LICENSE.md`](LICENSE.md): weights are BSD-3-Clause (Nsing Technologies Inc.); the license for the MNIST training data is undetermined (no statement on the official page; Keras documentation says CC BY-SA 3.0). `commercial_use: review`; consult legal counsel before commercial use.
+See [`LICENSE.md`](LICENSE.md): weights are BSD-3-Clause (Nsing Technologies Inc.); the license for the MNIST training data is undetermined (no statement on the official page; Keras documentation says CC BY-SA 3.0). `commercial_use: review`.
