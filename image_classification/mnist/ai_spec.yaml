@@ -1,9 +1,8 @@
 # MNIST Digit Recognition -- the pre/post-processing contract.
 #
-# This file travels with the model. `aistudio generate` looks for an
-# `ai_spec.yaml` beside the .tflite before it consults anything else, so the
-# parameters a preset was trained with stay next to the preset. They must
-# match training exactly; the tool refuses to guess them.
+# This file travels with the model. Consumers should read the `ai_spec.yaml`
+# beside the .tflite; the parameters a model was trained with stay next to
+# the model. They must match training exactly; do not guess them.
 
 preprocess:
   kind: image_grayscale

@@ -21,8 +21,7 @@
 target mean/std **折叠进最后一层权重**，所以导出的模型直接输出 PE（MW），端侧
 不需要反标准化。
 
-`window_len: 1` 是把「一条四特征记录」表达成工具认的一窗多通道；生成的前端
-按 `t * channels + c` 的布局写入输入。
+`window_len: 1` 是把「一条四特征记录」表达成一窗多通道；输入按 `t * channels + c` 的布局排列（`t` 为窗口内采样点，`c` 为通道）。
 
 ## 结构
 
@@ -60,4 +59,4 @@ CC BY 4.0 的署名（随模型再分发时保留）：
 > Tüfekci, P. & Kaya, H. (2014). *Combined Cycle Power Plant* [Dataset].
 > UCI Machine Learning Repository. https://doi.org/10.24432/C5002N
 
-权重许可见 [`LICENSE`](LICENSE)：Apache-2.0；数据集署名与链接必须保留。
+权重许可见 [`LICENSE.md`](LICENSE.md)：Apache-2.0；数据集署名与链接必须保留。

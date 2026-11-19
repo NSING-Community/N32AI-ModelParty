@@ -19,7 +19,7 @@ Arm 的 DS-CNN-S 关键词识别模型（12 类），输入是 49 帧 × 10 维 
 `Pretrained_models/DS_CNN/DS_CNN_S.pb`（TensorFlow 冻结图，Apache-2.0）。
 该上游仓库没有 `.tflite`；本文件是本项目用 TOCO 转出来的 float32 TFLite，
 **转换步骤与时间没有记录**，但文件与 N32 的 KWS 参考工程里的副本逐字节一致。
-修改说明：TensorFlow 图 → TFLite（TOCO 格式转换），权重未变。
+修改说明：TensorFlow 图 → TFLite（TOCO 格式转换）；转换时 BN 参数被折叠进前置卷积权重/偏置（确定性 folding，未重训/量化）。
 
 ## 训练数据
 
@@ -33,4 +33,4 @@ Google Speech Commands v0.01 / v0.02，按 **CC BY 4.0** 授权（Google 2017 �
 
 ## 许可
 
-见 [`LICENSE`](LICENSE)：权重 Apache-2.0，数据 CC BY 4.0，署名要求见文件内。
+见 [`LICENSE.md`](LICENSE.md)：权重 Apache-2.0，数据 CC BY 4.0，署名要求见文件内。

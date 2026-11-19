@@ -1,9 +1,16 @@
-# N32AI Model Zoo catalogue.
+# N32AI Model Party catalogue (n32ai-modelparty).
 #
 # One entry per model folder.  The category is the use-case folder it lives in;
-# `file` and `spec` are relative to this file's directory.  `license` is the
-# weight licence; a third-party model's folder LICENSE is authoritative and the
-# dataset licence is stated in its README.
+# `file` and `spec` are relative to this file's directory.
+#
+# BOM fields (mirrored by NOTICE and the per-model LICENSE.md):
+#   license          weight licence (SPDX expression or NOASSERTION)
+#   copyright        copyright holder for the weights
+#   dataset          training dataset
+#   dataset_license  dataset licence or terms
+#   commercial_use   release gate: allowed | review | prohibited
+#   sha256           model file hash (matches the model card)
+#   provenance       upstream URL/commit or in-house training source
 models:
   - key: mnist
     category: image_classification
@@ -11,7 +18,13 @@ models:
     task: classification
     file: image_classification/mnist/mnist.tflite
     spec: image_classification/mnist/ai_spec.yaml
-    license: NOASSERTION
+    license: BSD-3-Clause
+    copyright: "Nsing Technologies Inc. (国民技术股份有限公司)"
+    dataset: MNIST
+    dataset_license: "NOASSERTION (Keras docs claim CC-BY-SA-3.0; official page silent)"
+    commercial_use: review
+    sha256: 1ba966ac590b50b2c695bab1cb95b6b22a78f386d07eeee2e9aa6d16a5c7d64e
+    provenance: "in-house training by Nsing Technologies Inc. on the official MNIST dataset"
 
   - key: mobilenetv1_a025_128_int8
     category: image_classification
@@ -20,6 +33,12 @@ models:
     file: image_classification/mobilenetv1_a025_128_int8/mobilenetv1_a025_128_int8.tflite
     spec: image_classification/mobilenetv1_a025_128_int8/ai_spec.yaml
     license: Apache-2.0
+    copyright: "Google LLC / The TensorFlow Authors (Keras Applications)"
+    dataset: ImageNet/ILSVRC
+    dataset_license: "ImageNet Terms of Access (non-commercial research/education)"
+    commercial_use: review
+    sha256: ec9cbb11b84f4f6d205d2faba9ffd134e122d0ca9b92f8d05b8bf53a2602f149
+    provenance: "keras.applications.MobileNet(alpha=0.25, input_shape=(128,128,3), weights=imagenet)"
 
   - key: person_detection
     category: object_detection
@@ -28,6 +47,12 @@ models:
     file: object_detection/person_detection/person_detect.tflite
     spec: object_detection/person_detection/ai_spec.yaml
     license: Apache-2.0
+    copyright: "Copyright 2019 The TensorFlow Authors"
+    dataset: "Visual Wake Words (COCO 2014)"
+    dataset_license: "COCO annotations CC-BY-4.0; images per-Flickr (may include NC)"
+    commercial_use: review
+    sha256: 808cfdfc0cf3a6fa6f6fa26bfa379ea97c16d5db7334637766e39c3408502e9d
+    provenance: "tensorflow/tflite-micro@aeac6f39e5c7475cea20c54e86d41e3a38312546 (byte-identical)"
 
   - key: ds_cnn_s
     category: audio_event_detection
@@ -36,6 +61,12 @@ models:
     file: audio_event_detection/ds_cnn_s/DS_CNN_S.tflite
     spec: audio_event_detection/ds_cnn_s/ai_spec.yaml
     license: Apache-2.0
+    copyright: "Arm Limited (see LICENSE for exact upstream notices)"
+    dataset: Google Speech Commands
+    dataset_license: CC-BY-4.0
+    commercial_use: allowed
+    sha256: e4e6af6a3fc7db4f7fdea3430da82f979ad9c342082d6afab13c6810ea85c907
+    provenance: "ARM-software/ML-KWS-for-MCU Pretrained_models/DS_CNN/DS_CNN_S.pb (TOCO conversion)"
 
   - key: tap_detector
     category: human_activity_recognition
@@ -43,7 +74,13 @@ models:
     task: classification
     file: human_activity_recognition/tap_detector/tap_detector.tflite
     spec: human_activity_recognition/tap_detector/ai_spec.yaml
-    license: Apache-2.0
+    license: BSD-3-Clause
+    copyright: "Nsing Technologies Inc. (国民技术股份有限公司)"
+    dataset: "self-collected MPU6050"
+    dataset_license: own
+    commercial_use: review
+    sha256: 497ede0883d8d7e6497e54ae22f0f05efb77d844a8fb07b4dc24192e3c59c591
+    provenance: "in-house (PyTorch -> ONNX -> onnx2tf)"
 
   - key: kfupm_1dcnn
     category: predictive_maintenance
@@ -51,7 +88,13 @@ models:
     task: classification
     file: predictive_maintenance/kfupm_1dcnn/kfupm_1dcnn_int8.tflite
     spec: predictive_maintenance/kfupm_1dcnn/ai_spec.yaml
-    license: Apache-2.0
+    license: BSD-3-Clause
+    copyright: "Nsing Technologies Inc. (国民技术股份有限公司)"
+    dataset: "KFUPM four-channel vibration dataset"
+    dataset_license: CC-BY-4.0
+    commercial_use: allowed
+    sha256: 41b645cfc431f2b6ec4ad111d75d9287460cf5ad3347ff28c7fcf6b155046ba1
+    provenance: "in-house training on Mendeley DOI 10.17632/y8mv28hjwb.1"
 
   - key: ccpp_mlp
     category: regression
@@ -59,4 +102,10 @@ models:
     task: regression
     file: regression/ccpp_mlp/ccpp_mlp_float32.tflite
     spec: regression/ccpp_mlp/ai_spec.yaml
-    license: Apache-2.0
+    license: BSD-3-Clause
+    copyright: "Nsing Technologies Inc. (国民技术股份有限公司)"
+    dataset: "UCI Combined Cycle Power Plant"
+    dataset_license: CC-BY-4.0
+    commercial_use: allowed
+    sha256: 4d1436b5940391a56572e390968c4b9dc472c39870873a225e050a57f467f38f
+    provenance: "in-house training on UCI DOI 10.24432/C5002N"
