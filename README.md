@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # N32AI Model Party
 
 `n32ai-modelparty` 是一个面向国民技术股份有限公司 MCU 的模型库，按用途分类组织。每个模型文件夹里都有模型文件、`ai_spec.yaml`（预处理 / 后处理契约）、`README.md`（模型卡）和 `LICENSE.md`（权重许可与归属，含许可证全文）。
@@ -27,10 +29,7 @@
     └── ai_spec.yaml               预处理 / 后处理契约（与模型文件同目录）
 ```
 
-
-
 ## 许可与出处
-
 
 - 根 `LICENSE`：BSD 3-Clause，覆盖仓库自有内容（README、`models.yaml`、
   `ai_spec.yaml`、`mnist` / `tap_detector` / `kfupm_1dcnn` / `ccpp_mlp` 的自训权重等）。
