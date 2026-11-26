@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # Accelerometer Tap Detection
 
 在桌面静置的 MPU6050 上检测「手指敲击桌面」事件：256 点 × 三轴加速度 → `tap_prob`。
@@ -28,5 +30,5 @@ SHA-256、标签规则和「同一张桌子、同一设备、同一次采集」�
 
 ## 许可
 
-见 [`LICENSE`](LICENSE)：维护者自有权重，按 Apache-2.0 发布；数据是自采的，没有
-第三方许可。
+见 [`LICENSE.md`](LICENSE.md)：维护者自有权重，按 BSD-3-Clause 发布；数据由维护者自行
+采集、训练自行完成，不涉及任何第三方数据或权重。`commercial_use: allowed`。

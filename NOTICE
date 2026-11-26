@@ -1,0 +1,109 @@
+N32AI Model Party
+Copyright (c) 2026, Nsing Technologies Inc. (国民技术股份有限公司)
+
+Code, documentation and model weights in this product that are wholly owned by
+Nsing Technologies Inc., or that Nsing Technologies Inc. is otherwise
+authorised to publish under the BSD 3-Clause License, are licensed under the
+BSD 3-Clause License (the "License"); you may not use such code, documentation
+or model weights except in compliance with the License. You may obtain a copy
+of the License at
+
+    https://opensource.org/license/bsd-3-clause
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Self-owned model weights covered by the BSD-3-Clause declaration above:
+mnist, tap_detector, kfupm_1dcnn, ccpp_mlp.
+
+Scope of this declaration: it applies only to code, documentation and model
+weights for which Nsing Technologies Inc. holds the complete copyright, or has
+obtained the necessary authorisation and the right to publish them under
+BSD-3-Clause. Where this product contains third-party models or derives from
+third-party datasets, those components keep their own copyright notices and
+licences, and are used, modified and distributed under the terms of those
+licences -- the Nsing Technologies Inc. copyright and the BSD-3-Clause
+declaration above do not apply to them. See the third-party component list
+below, and the licence texts in the shared `licenses/` directory.
+
+Redistribution of model files: every .tflite file must be redistributed
+together with the LICENSE.md in its folder (licence declaration and
+attributions) and the licence texts in `licenses/` that it references. The
+.tflite files carry no embedded licence metadata; extracting a .tflite on its
+own does not relieve anyone of the obligations in that LICENSE.md or the
+referenced `licenses/` text -- for the Apache-2.0 models this includes Section 4
+(provide a copy of the licence, state changes prominently, retain all copyright
+and attribution notices, and carry forward any upstream NOTICE content).
+
+================================================================================
+Third-party components
+================================================================================
+
+This product bundles or derives from the following third-party components.
+Your use of these components is also under the terms of their respective
+licenses, reproduced in the model folders listed below:
+
+  1. MobileNetV1 alpha=0.25, 128x128, ImageNet-1k, int8 TFLite
+     Copyright Google LLC / The TensorFlow Authors (Keras Applications).
+     License: Apache-2.0
+     Upstream: keras.applications.MobileNet(alpha=0.25, input_shape=(128,128,3),
+               weights="imagenet"); TF-Slim checkpoints (tensorflow/models).
+     Modifications: int8 TFLite conversion by Nsing Technologies Inc.
+     Dataset: ImageNet/ILSVRC. Its terms of access limit the database to
+              non-commercial research and educational purposes; whether those
+              terms reach the trained weights is legally unsettled.
+     Location: image_classification/mobilenetv1_a025_128_int8/
+
+  2. Person Detection (person_detect.tflite)
+     Copyright 2019 The TensorFlow Authors. All rights reserved.
+     License: Apache-2.0
+     Upstream: tensorflow/tflite-micro,
+               tensorflow/lite/micro/models/person_detect.tflite, commit
+               aeac6f39e5c7475cea20c54e86d41e3a38312546.
+     The file is byte-identical to upstream; no modification by Nsing.
+     Dataset: Visual Wake Words, derived from COCO 2014. COCO annotations are
+              CC BY 4.0; images remain under their individual Flickr licences,
+              some of which are NonCommercial.
+     Location: object_detection/person_detection/
+
+  3. DS-CNN-S Keyword Spotting (DS_CNN_S.tflite)
+     Copyright (C) 2018 Arm Limited or its affiliates.
+     Upstream notices: Copyright 2017 The TensorFlow Authors. All Rights
+     Reserved. Modifications Copyright 2017 Arm Inc. All Rights Reserved.
+     License: Apache-2.0
+     Upstream: ARM-software/ML-KWS-for-MCU,
+               Pretrained_models/DS_CNN/DS_CNN_S.pb.
+     Modifications: TOCO conversion to TFLite by Nsing Technologies Inc.; the
+                    batch-normalization parameters were folded into the
+                    preceding convolution weights/biases (deterministic BN
+                    folding; no retraining or quantization).
+     Dataset: Google Speech Commands, CC BY 4.0 (Pete Warden / Google);
+              Warden, P. (2018), arXiv:1804.03209.
+     Location: audio_event_detection/ds_cnn_s/
+
+Datasets used for training (not distributed with this product):
+
+  - ImageNet/ILSVRC: access terms limit use to non-commercial research and
+    education. https://www.image-net.org/accessagreement
+  - COCO 2014: annotations and website CC BY 4.0; images remain under their
+    individual Flickr licences, some NonCommercial. https://cocodataset.org
+  - Google Speech Commands: CC BY 4.0.
+    https://www.tensorflow.org/datasets/catalog/speech_commands
+  - KFUPM four-channel vibration dataset: CC BY 4.0.
+    https://doi.org/10.17632/y8mv28hjwb.1
+  - UCI Combined Cycle Power Plant: CC BY 4.0.
+    https://doi.org/10.24432/C5002N
+  - Photovoltaic DC Arc Faults Dataset (Bongale, Kulenkampff, Purucker;
+    Fraunhofer ISE): CC BY 4.0. https://doi.org/10.5281/zenodo.14804124
+  - MNIST: official page stated no licence; Keras docs claim CC BY-SA 3.0.
+  - Self-collected MPU6050 data: collected by the maintainer for this product;
+    no third-party dataset licence.
+
+Trademarks:
+"Nations", "Nationstech", "N32", "N32H787" and the Nations logo are
+trademarks of Nsing Technologies Inc. This project does not grant any right to
+use company or product trademarks beyond what is required for reasonable and
+customary use in describing the origin of the work.

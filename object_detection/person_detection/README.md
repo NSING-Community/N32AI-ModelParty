@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # Person Detection
 
 TensorFlow Lite Micro 的人体存在性检测模型：96×96 灰度图 → `no_person` / `person`。
@@ -26,8 +28,12 @@ Apache License, Version 2.0.”。本仓库没有做任何修改。
 ## 训练数据
 
 Visual Wake Words（person / not-person），由 COCO 2014 的训练+验证图像与标注生成。
-COCO 标注按 CC BY 4.0 授权，图像逐张按 Flickr 原许可；COCO 条款没有非商用限制，
-但要求遵守 Flickr 条款。**本仓库不包含 COCO/VWW 的图像或标注。**
+COCO 标注按 CC BY 4.0 授权，图像逐张按 Flickr 原许可；COCO 条款本身没有非商用限制，
+但图像许可中有一部分是 NonCommercial（CC BY-NC 系列），权重是否受图像许可约束
+法律上没有定论。**本仓库不包含 COCO/VWW 的图像或标注。**
+
+数据集引用：COCO 2014（COCO Consortium，CC BY 4.0，https://cocodataset.org）；
+Visual Wake Words（Chowdhery et al., 2019, arXiv:1906.05721）。
 
 ## 指标
 
@@ -35,4 +41,4 @@ COCO 标注按 CC BY 4.0 授权，图像逐张按 Flickr 原许可；COCO 条款
 
 ## 许可
 
-见 [`LICENSE`](LICENSE)：Apache-2.0。
+见 [`LICENSE.md`](LICENSE.md)：Apache-2.0。

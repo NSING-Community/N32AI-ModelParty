@@ -1,0 +1,59 @@
+
+preprocess:
+  kind: arc_features
+  sample_rate_hz: 4000.0
+  window_samples: 500
+  hop_samples: 50
+  source_channels: ["i_arc", "i_dc", "v_dut"]
+  model_channels:
+    - "arc_shape"
+    - "arc_pu"
+    - "dev_i_agc"
+    - "dev_v_abs"
+    - "trend_i"
+    - "hf_agc"
+    - "lvl_i_ctx"
+    - "lvl_v_ctx"
+  clip: 6.0
+  eps: 1.0e-6
+  gain:
+    - 0.3225540518760681
+    - 9.874273300170898
+    - 0.1666666716337204
+    - 0.5326470136642456
+    - 0.8144317269325256
+    - 0.3829265236854553
+    - 1.4310964345932007
+    - 0.4294551610946655
+  median_source: ema
+  median_tau_s: 20.0
+  hf_sample_rate_hz: 32000.0
+  agc:
+    tau_lvl: 20.0
+    tau_fast: 0.5
+    tau_env_up: 30.0
+    tau_env_dn: 0.15
+    floor: 0.0001
+    warm_s: 0.125
+    trend_mid_s: 5.0
+    hf_tau_s: 30.0
+    hf_floor_rel: 0.02
+    dev_v_scale: 30.0
+  quantize:
+    input_scale: 0.05082285404205322
+    input_zero_point: 5
+
+postprocess:
+  kind: softmax_threshold
+  class_names: ["normal", "arc"]
+  class_index: 1
+  threshold: 0.66
+  persistence_rule: kofm
+  persistence_k: 3
+  persistence_m: 5
+  # min_run / release_run are for the alternate "streak" rule; kept for parity
+  # with model.json, but the current rule is kofm.
+  min_run: 5
+  release_run: 1
+  output_scale: 0.1427835375070572
+  output_zero_point: 0

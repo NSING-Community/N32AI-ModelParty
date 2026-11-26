@@ -1,3 +1,5 @@
+**简体中文** | [English](README.en.md)
+
 # MobileNetV1 a0.25 128 — ImageNet-1k
 
 Keras Applications 的 MobileNetV1（α=0.25，128×128）在 ImageNet-1k 上的 1000 类分类
@@ -39,4 +41,4 @@ int8 与 float 的 Top-1 一致率 77.35%。校准只用了 imagenette2-160 的 
 
 ## 许可
 
-见 [`LICENSE`](LICENSE)：权重 Apache-2.0；ImageNet 条款的商用口径请法务确认。
+见 [`LICENSE.md`](LICENSE.md)：权重 Apache-2.0。

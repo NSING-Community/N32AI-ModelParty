@@ -14,12 +14,12 @@
 # gains, hence a per-channel table rather than one scalar.
 #
 # The training script also subtracts each window's own per-channel mean.
-# `window_mean: true` can express that step (and `aistudio dataset` would
+# `window_mean: true` can express that step (and a dataset loader would
 # centre the same way), but this slot keeps the exported global normalisation
 # as-is: the dataset's records are near zero mean -- their means are small
 # against these channel standard deviations -- so the residual is small. A
 # deployment whose sensor front end carries a large DC offset should either
-# remove it before calling ai_preproc_run() or switch this contract to
+# remove it before preprocessing or switch this contract to
 # window_mean.
 #
 # The output is a three-way softmax in the dataset's label order:
